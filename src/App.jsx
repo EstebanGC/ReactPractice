@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import ProductList from './components/products/ProductList'
 import './App.css'
+import StoreProvider, { Store } from './state/StoreProvider'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     
-      <h1>Inventory App</h1>
+      <StoreProvider>
+        <ProductList/>
+      </StoreProvider>
       
   )
 }
